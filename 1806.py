@@ -10,7 +10,7 @@ def solve():
         return
 
     answer = right - left  # 현재 S를 넘는 부분합의 길이
-    while left <= right and left < n:
+    while left < n:
         if cur_sum < s and right < n:
             cur_sum += nums[right]
             right += 1
