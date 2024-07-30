@@ -2,15 +2,10 @@ import math
 n = int(input())
 
 def is_palindrome(num):
-    num_list = []
-    while num > 0:
-        num_list.append(num % 10)
-        num //= 10
-    end = len(num_list)
-    for i in range(end // 2):
-        if num_list[i] != num_list[end - 1]:
+    num_list = list(str(num))
+    for i in range(len(num_list)):
+        if num_list[i] != num_list[-i - 1]:
             return False
-        end -= 1
     return True
 
 
